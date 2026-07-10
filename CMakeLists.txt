@@ -60,6 +60,12 @@ CNPM_PREPARE_PACKAGES(
     "$ENV{CNPM_URLS}"
 )
 
+if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+    set(QWINDOWKIT_FORCE_QT_WINDOW_CONTEXT ON CACHE BOOL "Force use Qt Window Context" FORCE)
+endif()
+
+set(CMAKE_DEBUG_POSTFIX "d")
+
 # ----------------------------------
 # CMake Settings
 # ----------------------------------

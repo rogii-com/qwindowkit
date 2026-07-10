@@ -35,7 +35,7 @@ if(WIN32)
         shared/windows10borderhandler_p.h
     )
 elseif(APPLE)
-else()
+elseif(LINUX AND NOT QWINDOWKIT_FORCE_QT_WINDOW_CONTEXT)
     list(APPEND _src
         qwindowkit_linux.h
         qwindowkit_linux.cpp
@@ -58,7 +58,7 @@ elseif(APPLE)
         "-framework Cocoa"
         "-framework AppKit"
     )
-else()
+elseif(LINUX AND NOT QWINDOWKIT_FORCE_QT_WINDOW_CONTEXT)
     list(APPEND _src
         contexts/linuxx11context_p.h
         contexts/linuxx11context.cpp

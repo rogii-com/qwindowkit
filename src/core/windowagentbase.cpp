@@ -13,7 +13,8 @@
 #  include "win32windowcontext_p.h"
 #elif defined(Q_OS_MAC)
 #  include "cocoawindowcontext_p.h"
-#elif defined(Q_OS_LINUX) && QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+#elif defined(Q_OS_LINUX) && QT_VERSION >= QT_VERSION_CHECK(6, 0, 0) && \
+    !QWINDOWKIT_CONFIG(FORCE_QT_WINDOW_CONTEXT)
 #  include "qwindowkit_linux.h"
 #  include "linuxwaylandcontext_p.h"
 #  include "linuxx11context_p.h"

@@ -1,5 +1,19 @@
-    message(
-        FATAL_ERROR
-        "QWindowKit: this Qt build is not suitable for Linux. \
-Required QtGui features are disabled:"
-    )
+CNPM_ADD_PACKAGE(
+    NAME
+        gxx_runtime
+    VERSION
+        14.2.0
+    BUILD_NUMBER
+        0
+)
+
+CNPM_ADD_PACKAGE(
+    NAME
+        Qt
+    VERSION
+        6.11.1
+    BUILD_NUMBER
+        1840
+    TAG
+        "gxx14.2.0"
+)

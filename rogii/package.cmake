@@ -22,7 +22,7 @@ foreach(name Core Widgets)
         )
     elseif(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
         set_target_properties(
-            ShapeLib::library
+            QWindowKit::${name}
             PROPERTIES
             IMPORTED_LOCATION
                 "${CMAKE_CURRENT_LIST_DIR}/lib/libQWK${name}.so"
